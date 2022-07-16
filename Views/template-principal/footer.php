@@ -3,54 +3,60 @@
 <!-- login-->
 <div id="modalLogin" class="modal fade" tabindex="-1" role="dialog"  aria-labelledby="my-modal-title" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
+    <div class="modal-content">                                              
       <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="titleLogin">Iniciar Sesión</h5>
-        <button class="btn-close" data-bs-dismiss="" aria-label="closed" ></button>
+        <h5 class="modal-title" id="titleLogin">Iniciar Sesión o Crear Cuenta</h5>
+        <button class="btn-close" data-bs-dismiss="modal" aria-label="closed" ></button>
       </div>
 
       <div class="modal-body m-3">
         <form method="get" action="" >
           <div class="text-center">
-          <img class="img-thumbnail rounded-circle" src="<?php echo BASE_URL . 'assets/img/logo.png';?>" alt="" width="100">
+          <img class="img-thumbnail rounded-circle" src="<?php echo BASE_URL . 'assets/img/fall.png';?>" alt="" width="100">
           </div>
 
           <div class="row">
               <div class="col-md-12" id="frmLogin">
                 <div class="form-group mb-3">
                   <label for="correoLogin"> <i class="fas fa-envelope"></i> Correo</label>
-                  <input id="correoLogin" class="form-control" type="text" name="correoLogin" placeholder="Correo electrónico">
+                  <input id="correoLogin" class="form-control" type="email" name="correoLogin" placeholder="Correo electrónico">
                 </div>
                 <div class="form-group mb-3">
                   <label for="claveLogin"><i class="fas fa-key" ></i> Contraseña</label>
-                  <input id="claveLogin" class="form-control" type="text" name="claveLogin" placeholder="Contraseña">
+                  <input id="claveLogin" class="form-control" type="password" name="claveLogin" placeholder="Contraseña">
                </div>
+               <a href="#" id="btnRegister" >Crea tu cuenta aquí</a>
+                <div class="float-end">
+                 <button class="btn btn-primary btn-lg" type="button" id="login">Login</button>
+                </div>
               </div>
               <!--formulario de registro-->
-              <div class="col-md-12 d-none">
+              <div class="col-md-12 d-none"  id="frmRegister">
               <div class="form-group mb-3">
                   <label for="nombreRegistro"> <i class="fas fa-list"></i> Nombre</label>
-                  <input id="nombreRegistro" class="form-control" type="text" name="nombreRegistro" placeholder="Nombre">
+                  <input id="nombreRegistro" class="form-control" type="text" name="nombreRegistro" placeholder="Nombre completo">
                 </div>
                 <div class="form-group mb-3">
                   <label for="correoRegistro"> <i class="fas fa-envelope"></i> Correo</label>
-                  <input id="correoRegistro" class="form-control" type="text" name="correoRegistro" placeholder="Correo electrónico">
+                  <input id="correoRegistro" class="form-control" type="email" name="correoRegistro" placeholder="Correo electrónico">
                 </div>
                 <div class="form-group mb-3">
                   <label for="claveoRegistro"><i class="fas fa-key" ></i> Contraseña</label>
-                  <input id="claveRegistro" class="form-control" type="text" name="claveRegistro" placeholder="Contraseña">
-               </div>
+                  <input id="claveRegistro" class="form-control" type="password" name="claveRegistro" placeholder="Contraseña">
+                  
+                </div>
+                <a href="#" id="btnLogin" >Ya tienes cuenta?</a>
+                <div class="float-end">
+                 <button class="btn btn-primary btn-lg" type="button" id ="registrarse">Registrate</button>
+                </div>
               </div>
           </div>
+          
 
           
         </form>
       </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary" href="<?php echo BASE_URL . 'clientes' ?>"></a>
-        <button class="btn btn-primary" type="button">Login</button>
-        <button class="btn btn-danger" type="button">Registrarse</button>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -83,7 +89,7 @@
         <div class="col-md-4 pt-5">
           <h2 class="h2 text-light border-bottom pb-3 border-light">Inicio</h2>
           <ul class="list-unstyled text-light footer-link-list">
-            <li><a class="text-decoration-none" href="#">Menu</a></li>
+            <li><a class="text-decoration-none" href="<?php echo BASE_URL?>">Menu</a></li>
          
           </ul>
         </div>
@@ -113,4 +119,10 @@
   <script src="<?php echo BASE_URL;?>assets/js/bootstrap.bundle.min.js"></script>
   <script src="<?php echo BASE_URL;?>assets/js/templatemo.js"></script>
   <script src="<?php echo BASE_URL;?>assets/js/all.min.js"></script>
+  <script src="<?php echo BASE_URL;?>assets/js/sweetalert2.all.min.js"></script>
+  
+  <script > 
+  const base_url="<?php echo BASE_URL;?>" 
+  </script>
+  <script src="<?php echo BASE_URL;?>assets/js/login.js"></script>
   <!-- End Script -->
